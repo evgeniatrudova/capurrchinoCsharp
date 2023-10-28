@@ -1,0 +1,2 @@
+# capurrchinoCsharp
+Csharp foundations. 
