@@ -1,0 +1,154 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("_________________________");
+        Console.WriteLine("C Sharp kurs");
+
+        Console.Write("Ange ditt namn: ");
+        string firstName = Console.ReadLine();
+
+        Console.Write("Ange ditt efternamn: ");
+        string lastName = Console.ReadLine();
+        Console.WriteLine("_________________________");
+
+        bool continueTest1 = true;
+
+        while (continueTest1)
+        {
+            Console.WriteLine("Test 1: Kaffe Kassa Carpurrchino");
+            Console.WriteLine("_________________________");
+
+            Console.Write("Ange total summa: ");
+            decimal price = decimal.Parse(Console.ReadLine());
+
+            Console.Write("Ange summa kontanter kund har betalt: ");
+            decimal amountPaid = decimal.Parse(Console.ReadLine());
+
+            decimal change = amountPaid - price;
+            Console.WriteLine("Kontant tillbaka:");
+
+            int[] billsAndCoins = { 200, 100, 50, 20, 10, 5, 1 };
+
+            foreach (int billOrCoin in billsAndCoins)
+            {
+                int count = (int)(change / billOrCoin);
+                if (count > 0)
+                {
+                    change -= count * billOrCoin;
+                    string currencyName = (billOrCoin == 200) ? "2-hundralapp" :
+                        (billOrCoin == 100) ? "hundralapp" :
+                        (billOrCoin == 50) ? "femtiolapp" :
+                        (billOrCoin == 20) ? "tjugo" :
+                        (billOrCoin == 10) ? "tio" :
+                        (billOrCoin == 5) ? "femkrona" :
+                        "enkronor";
+
+                    Console.WriteLine($"{count} stycken {currencyName}");
+                }
+            }
+
+            Console.WriteLine("_________________________");
+            Console.Write("Vidare till Test 2? (ja/nej): ");
+            string response = Console.ReadLine().ToLower();
+            if (response != "ja")
+            {
+                continueTest1 = true;
+            }
+            else
+            {
+                continueTest1 = false;
+            }
+        }
+
+        Console.WriteLine("_________________________");
+        Console.WriteLine("Test 2: Capurrchino");
+        Console.WriteLine("_________________________");
+
+        string employeeName, personalNumber, storeLocation;
+        int customers, orders, employees, workload, employeeRating, storeRatingStar;
+
+        Console.Write("Ange ditt namn: ");
+        employeeName = Console.ReadLine();
+
+        Console.Write("Ange ditt personal nummer: ");
+        personalNumber = Console.ReadLine();
+
+        Console.Write("Butik lokal: ");
+        storeLocation = Console.ReadLine();
+
+        Random random = new Random();
+        customers = random.Next(50, 301);
+
+        orders = CalculateOrders(customers);
+        employees = CalculateEmployees(customers);
+        workload = CalculateWorkload(employees);
+        employeeRating = CalculateEmployeeRating(workload, employees);
+        storeRatingStar = CalculateStoreRating(customers, employees, workload, employeeRating);
+
+        int workloadInCats = (workload / 50) + 1;
+
+        Console.WriteLine($"Antal kunder: {customers} vecka");
+        Console.WriteLine($"Antal orders: {orders} vecka");
+        Console.WriteLine($"Antal medarbetare: {employees}");
+        Console.WriteLine($"Belastning grad: {workloadInCats} katt");
+        Console.WriteLine($"Ditt betyg: {employeeRating} star");
+
+        Console.WriteLine("_________________________");
+        Console.WriteLine("Capurrchino");
+        Console.WriteLine("Sammanfattning distikt/stad:");
+
+        string actionMessage = "";
+        if (storeRatingStar == 1)
+        {
+            actionMessage = "Shop needs improvement. Consider hiring more employees or improving safety measures.";
+        }
+        else if (storeRatingStar == 2)
+        {
+            actionMessage = "Shop is performing decently. Maintain current standards and monitor safety.";
+        }
+        else if (storeRatingStar == 3)
+        {
+            actionMessage = "Shop is doing well. Focus on improving order efficiency and safety records.";
+        }
+        else if (storeRatingStar == 4)
+        {
+            actionMessage = "Shop is excellent. Maintain current standards and explore ways to attract more customers.";
+        }
+        else if (storeRatingStar == 5)
+        {
+            actionMessage = "Shop is outstanding. Keep up the good work and focus on expanding your customer base.";
+        }
+
+        Console.WriteLine($"Butik betyg: {storeRatingStar} star");
+        Console.WriteLine("To do: " + actionMessage);
+        Console.WriteLine("_________________________");
+    }
+
+    static int CalculateOrders(int customers)
+    {
+        return customers * 2;
+    }
+
+    static int CalculateEmployees(int customers)
+    {
+        return customers / 30;
+    }
+
+    static int CalculateWorkload(int employees)
+    {
+        return employees * 5;
+    }
+
+    static int CalculateEmployeeRating(int workload, int employees)
+    {
+        return (workload > 20 && employees >= 5) ? 5 : 4;
+    }
+
+    static int CalculateStoreRating(int customers, int employees, int workload, int employeeRating)
+    {
+        return (customers > 100 && employees >= 4 && workload <= 20 && employeeRating == 5) ? 5 : 4;
+    }
+}
