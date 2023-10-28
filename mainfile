@@ -18,7 +18,7 @@ class Program
 
         while (continueTest1)
         {
-            Console.WriteLine("Test 1: Kaffe Kassa Carpurrchino");
+            Console.WriteLine("Test 1: Kaffe Kassa Capurrchino");
             Console.WriteLine("_________________________");
 
             Console.Write("Ange total summa: ");
