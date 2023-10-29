@@ -1,3 +1,45 @@
+ /// Kommentärer till kod
+
+ /// Huvud Klass:  Program
+ /// Programstruktur:   Program (Main)
+ /// Metod 1: Console.WriteLine = Skriver meddelande till konsol. 
+ /// Metod 2: Console.Write = Skriver utan nytt rad
+ /// Metod 3: Console.ReadLine = Läser input från användare
+ /// Variabler: håller i data av 18 typer >  firstName, lastName, price, amountPaid, change, billsAndCoinds, response, employeeName,personalNumber, storeLocation, employees, orders, customers, workload, employeeRating, storeRatingStar, workloadInCats, actionMessage. 
+ /// Loop metod :  ett enkel while loop med if och else if, funktionalitet av beräkning.
+ /// Matematiska operoner: Används för att göra beräkning av växel ex > 0   
+ /// Flöde av program: continueTest1 
+ /// Klass Random : Skapar data som visas i program
+ /// Logiska funktion metoder: CalculaterOrders, CaLculatedEmployees, CalculatWorkload, CalculateEmployeeRatomg. CalculateEmplyeeRating, CalculateStoreRating
+
+ /// Logik bakom beräkningar: 
+ /// Betyg av medarbetare 1 star: Antal arbetsdagar < 5 
+ /// Antal medarbetare med 2 star: Antal arbetsdagar = eller > 14 + 50 beställningar avslutade
+ /// Antal medarbetare med 3 star: 100 beställningar
+ /// Antal medarbetare med 4 star: 150 beställningar
+ /// Antal medarbetare med 5 star: 200 beställningar
+ /// Antal medarbetare med 1 star: 
+ /// Antal medarbetare med 2 star: 
+ /// Antal medarbetare med 3 star: 
+ /// Antal medarbetare med 4 star: 
+ /// Antal medarbetare med 5 star: 
+ /// Betyg butik 1 star: Rapporterad olycka eller mindre än 3 meddarbetare eller 3 medarbetare med 1 star
+ /// Betyg butik 2 star: Inga olyckor 2 meddarbetare med 1 star Inga olyckor under 3 månader
+ /// Betyg butik 3 star: Mindre än 150 beställningar eller 2 medarbetare med 1 star som jobbar längre än 14 dagar, Inga olyckor under 6 månader
+ /// Betyg butik 4 star: Mindre än 200 kunder, mindre än 4 medarbetare, Inga olyckor under 8 månader
+ /// Betyg butik 5 star: Har 250 eller fler beställningar samt minst 3 medarbetare med 5 star, Inga olyckor under 12 månader
+ /// Om belastning grad är över 1 katt, ge anställda ett 50% rabatt på köp av 2 varor.
+ /// Om belastning drad är över 2 katter, anställ nytt vikarie på 50%
+ /// Om belastning grad är över 3 katter, anställ nytt vikarie på 75%
+ /// Om belastning grad är över 4 katter, anställ nytt medarbetare på 100%
+ /// 50 kunder i veckan graderas som 1 katt belastning
+ /// 100 kunder i veckan graderas som 2 katt belastning
+ /// 150 kunder i veckan graderas som 3 katt belastning
+ /// 200 kunder i veckan graderas som 4 katt belastning
+ /// 250 kunder i veckan graderas som 5 katt belastning
+ /// 
+ ///
+
 using System;
 
 class Program
