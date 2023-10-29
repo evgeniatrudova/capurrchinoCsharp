@@ -1,0 +1,12 @@
+Överföring till Apps, har inte gått bra. 
+Jag ville bygga på, en stycke kod i taget och testa under bygge.
+Jag har byggd design och namngett alla objekt efter deras funktion. 
+
+Första moment:
+Uträkning av ChangeBack i Uppgift 1 via matematisk beräkning av changeBack = paidSum - totalSum;
+Jag vill att nummer av changeback visas i lable som är markerad med __Data visas inte här___, men tyvärr så händer ingenting när man trycker på button.
+
+Samma princip har applicerats till enklare Hello World, när man trycker på button och fungerat perfect. 
+Fel ligger inte i namngivningen, möjligtviss är det fel med string vs number eller något annat. 
+
+Så, uppgiften har fastnat där. 
