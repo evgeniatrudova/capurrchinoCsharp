@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp4
@@ -10,6 +10,8 @@ namespace WindowsFormsApp4
             InitializeComponent();
         }
 
+/// här har kod fastnat
+
         private void button1_Click(object sender, EventArgs e)
         {
             int totalSum;
@@ -17,9 +19,7 @@ namespace WindowsFormsApp4
 
             if (int.TryParse(textBox1.Text, out totalSum) && int.TryParse(textBox2.Text, out paidSum))
             {
-                int changeBack = paidSum - totalSum;
-
-                
+                int changeBack = paidSum - totalSum;                
                 test1_changeback_lbl.Text = changeBack.ToString();
             }
             else
@@ -27,6 +27,8 @@ namespace WindowsFormsApp4
                 test1_changeback_lbl.Text = "Invalid Input";
             }
         }
+
+// Fel meddelande om label1_Click och Form1_Load är inte inkluderade. 
 
         private void label1_Click(object sender, EventArgs e)
         {
